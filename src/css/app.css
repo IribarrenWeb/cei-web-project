@@ -61,7 +61,7 @@ body {
     background-color: var(--primary-color);
     color: var(--text-color);
     font-size: 16px;
-    cursor: none;
+    /* cursor: none; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -102,13 +102,13 @@ p {
 
 #light-cursor {
     position: fixed;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: radial-gradient(circle, #ffffff, #ffffff);
-    pointer-events: none;
+    /* width: 15px; */
+    /* height: 15px; */
+    /* border-radius: 50%; */
+    /* background: radial-gradient(circle, #ffffff, #ffffff); */
+    /* pointer-events: none; */
     mix-blend-mode: screen;
-    box-shadow: 0 0 3em 12px #e5e1f6, 0 0 3em 14px #ffffff;
+    box-shadow: 0 0 6em 20px #e5e1f6, 0 0 11em 10px #ffffff;
     transition: transform 0.1s ease;
     z-index: 9999;
 }
