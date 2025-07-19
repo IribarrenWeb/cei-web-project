@@ -52,6 +52,20 @@
     }
 }
 
+@keyframes acordion {
+    0% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 0;
+        height: 0;
+        display: none;
+    }
+}
+
 .pulse {
     animation: pulseAnim 1.5s infinite;
 }
@@ -67,4 +81,8 @@
 .fade-in {
     opacity: 0;
     animation: fadeIn 1.5s ease-in forwards;
+}
+
+.acordion {
+    animation: acordion 2s ease-out forwards;
 }
