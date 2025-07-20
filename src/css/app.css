@@ -227,6 +227,14 @@ main {
     color: var(--text-color);
 }
 
+#experience-list ul li:hover { 
+    background-color: var(--secondary-light-color);
+    color: var(--text-color);
+    box-shadow: 0 0 1em var(--secondary-light-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
 #experience-list ul li:not(:last-child) {
     margin-right: 1em;
 }
@@ -235,6 +243,87 @@ main {
     margin: 3em 0;
 }
 
+.experience-item-period {
+    font-weight: 600;
+    color: var(--paragraph-color);
+    font-size: 0.85em;
+    text-transform: uppercase;
+}
+
+.experience-item-company {
+    font-weight: 600;
+    color: var(--paragraph-color);
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.experience-item-title {
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1.25em;
+}
+
+#skills-list {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1em;
+}
+
+#skills-list .skill-levels {
+    display: grid;
+    margin-top: 0.75em;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5em;
+}
+
+.skill-item-name {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+#skills-list .skill-levels .skill-level-item {
+    width: 100%;
+    height: 0.5em;
+    background-color: var(--paragraph-color);
+    border-radius: 0.25em;
+    box-shadow: inset 0 0 0.25em var(--dark-color);
+}
+
+#skills-list .skill-levels .skill-level-item.active {
+    background-color: var(--secondary-light-color);
+    box-shadow: 0 0 0.25em var(--secondary-light-color);
+}
+
+.link-btn {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.link-btn:hover {
+    text-shadow: 0 0 1em var(--text-color); 
+}
+
+.link-btn img {
+    margin-left: 0.5em;
+    rotate: 150deg;
+}
+
+#footer {
+    margin-top: 2em;
+    padding: 1em;
+    text-align: center;
+    font-size: 0.875em;
+    color: var(--text-color);
+}
+.quote {
+    font-style: italic;
+    color: var(--text-ligth-color);
+    margin-top: 2em;
+    text-align: center;
+}
 
 @media (max-width: 767px) {
     #content {
