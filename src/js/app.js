@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadComponent('#about', './modules/about.html');
     loadComponent('#experience', './modules/experience.html');
     loadComponent('#skills', './modules/skills.html');
+    loadComponent('#footer', './modules/footer.html');
     
     const cursor = document.getElementById('light-cursor');
     const cursor2 = document.getElementById('light-cursor-two');
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('mousemove', (e) => {
         if (isDevice) return;
-        cursor.style.background = `radial-gradient(600px at ${e.clientX}px ${e.clientY}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
+        cursor.style.background = `radial-gradient(600px at ${e.clientX}px ${e.clientY}px, rgba(125, 156, 241, 0.22), transparent 80%)`;
     });
 
     function moveRandomRadialGradient() {
@@ -20,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cursorToMove = cursorSwitch ? cursor2 : cursor;
         const randomX = Math.floor(Math.random() * window.innerWidth);
         const randomY = Math.floor(Math.random() * window.innerHeight);
-        cursorToMove.style.background = `radial-gradient(600px at ${randomX}px ${randomY}px, rgba(29, 78, 216, 0.15), transparent 90%)`;
+        cursorToMove.style.background = `radial-gradient(600px at ${randomX}px ${randomY}px, rgba(125, 156, 241, 0.22), transparent 80%)`;
 
         if (!cursorSwitch) {
             switchAnimations(cursor2, true);
