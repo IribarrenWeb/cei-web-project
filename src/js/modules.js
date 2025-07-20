@@ -15,13 +15,15 @@ window.addEventListener('load', async () => {
         `
             <section class="experience-item">
                 <div class="experience-item-period">${item.from} - ${item.to}</div>
-                <div class="experience-item-title">${item.title}</div>
-                <div class="experience-item-company">${item.company}</div>
-                <p>${item.description}</p>
-                <div class="experience-item-skills">
-                    <ul>
-                        ${item.skills.map(skill => `<li>${skill}</li>`).join('')}
-                    </ul>
+                <div>
+                    <div class="experience-item-title">${item.title}</div>
+                    <div class="experience-item-company">${item.company}</div>
+                    <p>${item.description}</p>
+                    <div class="experience-item-skills">
+                        <ul>
+                            ${item.skills.map(skill => `<li>${skill}</li>`).join('')}
+                        </ul>
+                    </div>
                 </div>
             </section>
         `
