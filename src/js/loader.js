@@ -83,7 +83,7 @@ window.addEventListener('load', async () => {
 
     window.addEventListener('scroll', (e) => {
         const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-        const isDevice = window.matchMedia("(max-width: 768px)").matches;
+        const isDevice = window.matchMedia("(max-width: 1023px)").matches;
         
         if (isDevice) return;
 
