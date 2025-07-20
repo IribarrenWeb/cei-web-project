@@ -9,7 +9,7 @@ window.addEventListener('load', async () => {
         template +=
         `
             <section class="experience-item">
-                <div class="experience-item-period">${item.to} - ${item.from}</div>
+                <div class="experience-item-period">${item.from} - ${item.to}</div>
                 <div class="experience-item-title">${item.title}</div>
                 <p>${item.description}</p>
                 <div class="experience-item-skills">
