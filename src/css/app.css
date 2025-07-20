@@ -114,12 +114,11 @@ main {
     position: relative;
 }
 
-#light-cursor {
+.light-cursor {
     position: fixed;
     mix-blend-mode: screen;
     inset: 0;
-    background: radial-gradient(600px at 0px 0px, rgba(16, 23, 38, 0.15), transparent 80%);
-    transition: background-position 1s ease;
+    background: radial-gradient(600px at 0px 0px, rgba(16, 23, 38, 0.15), transparent 90%);
 }
 
 
