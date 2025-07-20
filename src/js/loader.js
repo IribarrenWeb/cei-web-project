@@ -1,5 +1,5 @@
 window.addEventListener('load', async () => {
-    await delay(2000)
+    await delay(500)
     const audioTyping = document.getElementById('audio-typing');
     const typedName = document.getElementById('typed-name');
     const typedTitle = document.getElementById('typed-title');
