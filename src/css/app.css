@@ -109,9 +109,15 @@ p {
 }
 
 main {
-    padding: 3rem 1.5rem;
+    /* padding: 3rem 1.5rem; */
     z-index: 1;
     position: relative;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .light-cursor {
@@ -311,13 +317,17 @@ main {
     rotate: 150deg;
 }
 
-#footer {
+.footer {
     margin-top: 2em;
     padding: 1em;
     text-align: center;
     font-size: 0.875em;
     color: var(--text-color);
 }
+#footer-inner {
+    display: none;
+}
+
 .quote {
     font-style: italic;
     color: var(--text-ligth-color);
@@ -325,9 +335,123 @@ main {
     text-align: center;
 }
 
-@media (max-width: 767px) {
+#aside-menu {
+    margin-top: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: none;
+}
+
+#aside-menu a {
+    color: var(--paragraph-color);
+}
+
+#aside-menu li:not(:first-child) {
+    margin-top: 1em;
+}
+
+#aside-menu li {
+    position: relative;
+    padding: 0 4rem;
+    transition: all 0.3s ease;
+}
+
+#aside-menu li::before {
+    content: "";
+    position: absolute;
+    width: 7%;
+    height: 0.1em;
+    background-color: var(--paragraph-color);
+    bottom: 40%;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+#aside-menu li:hover::before, #aside-menu li.active::before {
+    width: 13%;
+    height: 0.1em;
+    background-color: var(--text-color);
+    bottom: 40%;
+    left: 0;
+}
+
+#aside-menu li:hover, #aside-menu li.active {
+    padding: 0 6.5rem;
+}
+
+#aside-menu li:hover a, #aside-menu li.active a {
+    color: var(--text-color);
+}
+
+
+
+@media (min-width: 1024px) {
+    #aside {
+        min-width: 50%;
+        max-height: 100vh;
+        padding: 6rem 0;
+    }
+    #aside p {
+        min-width: 80%;
+    }
+
+    #aside .module-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    
+    #experience .module-page, #skills .module-page, #footer-inner .module-page {
+        padding-top: 6rem;
+    }
+
+    .module-page {
+        min-height: auto;
+    }
+
+    .module-title {
+        display: none;
+    }
+    
+    main {
+        padding: 0 4rem;
+    }
+
+    #modules-container{
+        padding: 6rem 0;
+    }
+
+    #footer-inner {
+        display: block;
+    }
+
+    #footer {
+        display: none;
+    }
+
+    #aside-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 1023px) {
+    main {
+        padding: 0 3rem;
+    }
+    .module-page{
+        height: auto;
+        min-height: auto;
+        margin-top: 5em;
+    }
     #content {
         flex-direction: column;
+    }
+    #loader {
+        display: none;
+    }
+    body {
+        overflow-y: auto !important;
     }
     #aside {
         width: 100%;
@@ -339,37 +463,31 @@ main {
     #content:nth-child(2) {
         width: 100%;
     }
-    .module-page{
-        height: auto;
-        min-height: auto;
-        margin-top: 5em;
-    }
-    #loader {
-        display: none;
-    }
-    body {
-        overflow-y: auto !important;
-    }
 }
 
 @media (min-width: 768px) {
     main {
-        padding: 4rem 3rem;
-    }
-
-    .module-title {
-        display: none;
+        /* padding: 4rem 3rem; */
     }
 }
 
-@media (min-width: 992px) {
+@media (max-width: 575px) {
+    #aside h1 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+    }
+    #aside p {
+        max-width: 100% !important;
+    }
     main {
-        padding: 6rem 4rem;
+        padding: 0 1.5rem;
     }
 }
 
-@media (min-width: 1200px) {
-    main {
-        padding: 8rem 6rem;
+@media (min-width: 576px) {
+    .experience-item {
+        display: grid;
+        grid-template-columns: 30% 1fr;
+        gap: 1em;
     }
 }
