@@ -250,7 +250,9 @@ ul {
     margin-top: 1em;
     list-style: none;
     padding: 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
 }
 
 #experience-list ul li {
@@ -267,10 +269,6 @@ ul {
     box-shadow: 0 0 1em var(--secondary-light-color);
     transition: all 0.3s ease;
     cursor: pointer;
-}
-
-#experience-list ul li:not(:last-child) {
-    margin-right: 1em;
 }
 
 .experience-item {
