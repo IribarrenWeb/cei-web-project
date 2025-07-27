@@ -1,15 +1,22 @@
 window.addEventListener('load', async () => {
+
+    // Obtener dataset
     const data = await fetch('../src/dataset.json');
     console.log('dataset',data);
+
+    // Parsear a json para recorrerla
     const json = await data.json();
     console.log('json',json);
+
+    // Setear variables correspondientes
     const experiences = json?.experiences ?? [];
     const skills = json?.skills ?? [];
-
 
     const experienceList = document.getElementById('experience-list');
     const skillsList = document.getElementById('skills-list');
     let templateExperiences = '';
+
+    // Crear template para modulo experiencia
     experiences.forEach(item => {
         templateExperiences +=
         `
@@ -30,6 +37,8 @@ window.addEventListener('load', async () => {
     })
 
     let templateSkills = '';
+
+    // Crear template para modulo skills
     skills.forEach(skill => {
         let templateLevels = ``;
         for (let i = 1; i <= 6; i++) {

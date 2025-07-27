@@ -1,12 +1,15 @@
 window.addEventListener('load', async () => {
     await delay(500)
+
+    // Inicializacion de variables
     const audioTyping = document.getElementById('audio-typing');
     const typedContainer = document.getElementById('typed-container');
     const cursor = document.getElementById('cursor');
     const body = document.querySelector('body');
     const loaderContainer = document.getElementById('loader');
     const toggleInit = document.getElementById('loader-toggle');
-    let lastScrollTop = 0;
+    
+    // Texto a typear
     const words = [
         'Hello World!',
         'I\'m Keinher Iribarren',
@@ -15,8 +18,10 @@ window.addEventListener('load', async () => {
         'startPage("CV");',
     ];
     let playing = false;
-    let blockScroll = true;
-    
+
+    /**
+     * Funcion que inicia el proceso de typeado
+     */
     async function init() {
         let wordsProcessed = 0;
         do {
@@ -37,10 +42,16 @@ window.addEventListener('load', async () => {
 
         } while (words.length > wordsProcessed)
 
+        // Agrega la clase acordion que elimina
+        // el loader y hace el body scrolleable
         loaderContainer.classList.add('acordion')
         body.style.overflowY = 'auto';
     }
 
+    /**
+     * Funcion que typea la palabra.
+     * Recibe el ${tag} como parametro
+     */
     async function typeWord(word, tag = 'span') {
         const newContainerMain = document.createElement('div')
         const newContainerWord = document.createElement(tag)
@@ -79,6 +90,9 @@ window.addEventListener('load', async () => {
         }
     }
 
+    /**
+     * Activa o desactiva el audio del typeado
+     */
     function playTypingSound() {
         try {
             if (playing) {
@@ -97,6 +111,9 @@ window.addEventListener('load', async () => {
         }
     }
 
+    /**
+     * Evento click para iniciar la "animacion" de typeado
+     */
     toggleInit.addEventListener('click', () => {
         toggleInit.style.display = 'none';
         typedContainer.style.display = 'flex';
@@ -105,23 +122,4 @@ window.addEventListener('load', async () => {
         })
     });
 
-    loaderContainer.addEventListener('animationend', (a) => {
-        if (a.animationName != 'acordion') return;
-        blockScroll = false;
-        window.removeEventListener('scroll', () => {});
-    });
-
-    window.addEventListener('scroll', (e) => {
-        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-        const isDevice = window.matchMedia("(max-width: 1023px)").matches;
-        
-        if (isDevice) return;
-
-        if (currentScroll > lastScrollTop && blockScroll) {
-            loaderContainer.classList.add('acordion');
-            window.scrollTo(0, 0);
-        }
-
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    });    
 })

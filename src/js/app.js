@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
+
+    // Carga de modulos dinamicos
     loadComponent('#loader', './modules/loader.html');
     loadComponent('#aside', './modules/aside.html');
     loadComponent('#about', './modules/about.html');
@@ -7,6 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadComponent('#footer', './modules/footer.html');
     loadComponent('#footer-inner', './modules/footer.html');
     
+    // Cursores
     const cursor = document.getElementById('light-cursor');
     const cursor2 = document.getElementById('light-cursor-two');
     const isDevice = window.matchMedia("(max-width: 1023px)").matches;
@@ -16,11 +19,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     const radientColor = isDevice ? 'rgba(125, 156, 241, 0.22)' : 'rgba(29, 78, 216, 0.15)'
 
+    // Efecto de cursor
     document.addEventListener('mousemove', (e) => {
         if (isDevice) return;
         cursor.style.background = `radial-gradient(600px at ${e.clientX}px ${e.clientY}px, ${radientColor}, transparent 80%)`;
     });
 
+    // Efecto de fondo solo en dispositivos
     function moveRandomRadialGradient() {
         cursorSwitch = !cursorSwitch;
         const cursorToMove = cursorSwitch ? cursor2 : cursor;
@@ -39,6 +44,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         setTimeout(() => moveRandomRadialGradient(), 2500);
     }
 
+    // Funcion para switchear animaciones (solo para dispositivos)
     function switchAnimations(element, isOut = false) {
         if (isOut) {
             element.classList.add('fade-out');
@@ -53,6 +59,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         moveRandomRadialGradient();
     }
 
+
+    // Funcion para mover automaticamente el menu seleccionado
+    // dependiendo del modulo que se tenga en pantalla visible
     const menuObserver = new IntersectionObserver((entries) => {
         console.log('menuObserver', entries);
         entries.forEach(entry => {
@@ -65,9 +74,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
     }, {
-        threshold: 0.3
+        threshold: 0.3 // rango de visibilidad para activar
     });
 
+    // Setear el menu activo
     function setMenuActive(element) {
         const activeMenu = document.querySelector('#aside-menu .active');
         if (activeMenu) activeMenu.classList.remove('active');
@@ -79,6 +89,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const menus = document.querySelectorAll('#aside-menu a');
     console.log('menus', menus);
     menus.forEach(menu => {
+
+        // Evento click en los menus para 
+        // desplazamiento de scroll
         menu.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -93,6 +106,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const sections = document.querySelectorAll('#experience, #skills, #about');
     console.log('sections', sections);
+
+    // Validaciones del observer
     if (sections.length === 0) {
         console.warn('No sections found for menu observer');
         return;

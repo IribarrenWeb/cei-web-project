@@ -1,3 +1,6 @@
+/**
+ * Funcion para cargar dinamicamente los componentes/secciones
+ */
 function loadComponent(selector, url) {
     fetch(url)
         .then(response => response.text())
@@ -9,6 +12,9 @@ function loadComponent(selector, url) {
         });
 }
 
+/**
+ * Funcion para retrasa/pausar la ejecucion de un script
+ */
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
