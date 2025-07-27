@@ -43,36 +43,36 @@
     ],
     "experiences": [
         {
-            "from": "01/07/2022",
-            "to": "presente",
+            "from": "Jul 2022",
+            "to": "present",
             "company": "Microvoz",
-            "title": "Desarrollador FullStack",
-            "skills": ["JavaScript","Laravel","PHP","VueJs"],
-            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
+            "title": "FullStack Developer",
+            "skills": ["JavaScript","Laravel","PHP","VueJs","MongoDB","MysQL","Docker","NestJs"],
+            "description": "During the project, I designed and implemented modules that expanded system capabilities and enhanced the user experience. I led the backend migration and optimization to Laravel with Octane, significantly boosting performance and reducing response times. By applying SOLID principles, I ensured clean, scalable, and maintainable code. I also maintained vanilla PHP applications—fixing bugs and improving stability—and implemented Elasticsearch to optimize search relevance and speed. Finally, I collaborated on defining requirements and planning new features aligned with business objectives."
         },
         {
-            "from": "01/07/2022",
-            "to": "presente",
+            "from": "Apr 2022",
+            "to": "Aug 2023",
             "company": "Doover",
-            "title": "Desarrollador FullStack",
-            "skills": ["JavaScript","Laravel","PHP","VueJs"],
-            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
+            "title": "FullStack Developer",
+            "skills": ["JavaScript","Laravel","PHP","VueJs","MysQL"],
+            "description": "I built a SPA from scratch using Laravel 9 as a RESTful API and Quasar Framework with Vue.js on the frontend, achieving a dynamic, modular, and highly responsive interface. I integrated Stripe to handle collections, authorizations, and webhooks for secure payments and a seamless user experience. I also automated daily tasks with Linux cronjobs to ensure timely, flawless execution. Finally, I planned and designed the entity‑relationship model in MySQL, structuring optimized schemas to guarantee data integrity and high query performance."
         },
         {
-            "from": "01/07/2022",
-            "to": "presente",
+            "from": "May 2021",
+            "to": "Oct 2021",
             "company": "Cronapis",
-            "title": "Desarrollador Backend",
-            "skills": ["JavaScript","Laravel","PHP","VueJs"],
-            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
+            "title": "Backend Developer",
+            "skills": ["JavaScript","Laravel","PHP","JQuery","MysQL"],
+            "description": "I developed from scratch a REST API in Laravel 7 to be consumed by both a SPA and a mobile app, designing scalable endpoints to meet the requirements of each platform. I implemented authentication with Laravel Sanctum, managing tokens and securing API routes for both the SPA and the mobile app. Finally, I managed Linux cronjobs to automate backups, log cleaning, and report generation."
         },
         {
-            "from": "01/07/2022",
-            "to": "presente",
+            "from": "Jul 2020",
+            "to": "Jun 2021",
             "company": "TVES",
-            "title": "Pasante Desarrollador",
+            "title": "Trainee Developer",
             "skills": ["JavaScript","PHP","MysQL"],
-            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
+            "description": "I built a help desk ticketing system from scratch using PHP vanilla and MySQL, with MVC pattern."
         }
     ]
 }
