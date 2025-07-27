@@ -12,7 +12,7 @@ window.addEventListener('load', async () => {
         'I\'m Keinher Iribarren',
         'a Full Stack Developer',
         'and this is my CV',
-        'startPage(pagetype);',
+        'startPage("CV");',
     ];
     let playing = false;
     let blockScroll = true;
